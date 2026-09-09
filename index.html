@@ -97,6 +97,15 @@ function copyWx(){ var t=document.getElementById('wxid').innerText;
   .then?undefined:undefined; alert('微信号已复制：'+t); }
 </script>
 
+<h2 id="pay">💰 购买与付款</h2>
+<div class="card" style="max-width:680px;margin:0 auto;text-align:center">
+  <p style="color:#94a3b8">微信 / 支付宝 扫一扫付款（金额以微信沟通为准）</p>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin:10px 0">
+    <div><img src="images/pay_wechat.png" alt="微信收款码" style="width:190px;border-radius:12px;border:1px solid #334155"><div style="color:#cbd5e1;font-size:13px;margin-top:4px">微信收款码</div></div>
+    <div><img src="images/pay_alipay.png" alt="支付宝收款码" style="width:190px;border-radius:12px;border:1px solid #334155"><div style="color:#cbd5e1;font-size:13px;margin-top:4px">支付宝收款码</div></div>
+  </div>
+  <p style="color:#94a3b8">付款后把 <b style="color:#60a5fa">“付款方式 + 金额 + 你的微信昵称”</b> 发给作者（微信号 ll04041229w），作者使用<b>自动发码台</b>秒发授权码并登记，后台可查、到期前可提醒续费。</p>
+</div>
 <h2>常见问题</h2>
 <div class="faq">
 <details><summary>数据是真的实时吗？</summary><p>是。行情来自腾讯/东财/新浪等公开实时接口：盘中自动刷新；收盘/休市显示最近一笔真实成交并标注“收盘”；接口失败时宁可显示最近数据并提示，也不显示假价。</p></details>
