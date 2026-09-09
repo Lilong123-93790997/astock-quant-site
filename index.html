@@ -76,10 +76,26 @@ ul{margin:8px 0 8px 20px;color:#d7e2f0}
 </ul>
 
 <div class="cta">
-<a class="btn" href="mailto:astockquant@example.com">私信领取试用码</a>
+<a class="btn" href="#wechat">加微信领试用码（7天）</a>
 <a class="btn sub" href="features.html">功能与版本</a>
 <a class="btn sub" href="https://github.com/Lilong123-93790997/astock-quant-site">查看仓库</a>
 </div>
+
+<h2 id="wechat">📲 加微信领 7 天免费试用</h2>
+<div class="card" style="max-width:640px;margin:0 auto;text-align:center">
+  <p style="color:#94a3b8">扫码或复制微信号，添加后发送 <b style="color:#60a5fa">“试用”</b>，即可领取 7 天全功能授权码。</p>
+  <img id="wxqr" src="images/wechat-qr.png" alt="微信二维码" style="width:200px;border-radius:12px;border:1px solid #334155;margin:10px auto;display:block"
+       onerror="document.getElementById('wxqr').style.display='none';document.getElementById('wxqrfake').style.display='block'">
+  <div id="wxqrfake" style="display:none;border:1px dashed #334155;border-radius:12px;padding:26px;margin:10px auto;color:#64748b">微信二维码占位（请作者上传 images/wechat-qr.png）</div>
+  <p style="font-size:18px;font-weight:bold;color:#fff">微信号：<span id="wxid">AStockQuant01</span>
+     <button onclick="copyWx()" style="background:#3b82f6;color:#fff;border:0;border-radius:8px;padding:8px 18px;margin-left:8px;cursor:pointer;font-weight:bold">一键复制微信号</button></p>
+  <p style="color:#64748b;font-size:12px">（演示占位，正式微信号上线前请作者替换 index.html 里的 AStockQuant01 与 wechat-qr.png）</p>
+</div>
+<script>
+function copyWx(){ var t=document.getElementById('wxid').innerText;
+  (navigator.clipboard? navigator.clipboard.writeText(t) : (function(){var i=document.createElement('textarea');i.value=t;document.body.appendChild(i);i.select();document.execCommand('copy');document.body.removeChild(i);})())
+  .then?undefined:undefined; alert('微信号已复制：'+t); }
+</script>
 
 <h2>常见问题</h2>
 <div class="faq">
