@@ -1,30 +1,41 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-width">
 <title>A-Share Quant Research Workbench</title>
-<meta name="description" content="Multi-market quant research: factor lab, professional backtesting with walk-forward, AI diagnosis, trade-plan generator, in-app visual reports.">
-<style>body{background:#0b1526;color:#e2e8f0;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;max-width:980px;margin:0 auto;padding:48px 22px}
+<meta name="description" content="Multi-market quant research workbench: live data (never faked), factor lab, professional backtesting with walk-forward, AI diagnosis and trade-plan generator.">
+<meta property="og:image" content="images/dashboard.png">
+<style>body{background:#0b1526;color:#e2e8f0;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;max-width:1000px;margin:0 auto;padding:46px 22px;line-height:1.7}
 h1{color:#fff;font-size:34px}.bl{color:#7dd3fc}.card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:18px 20px;margin:10px 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:18px 0}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
+.shot{background:#1e293b;border:1px solid #334155;border-radius:12px;overflow:hidden}
+.shot img{width:100%;display:block}.shot div{padding:10px 14px;color:#94a3b8;font-size:13px}
 .pill{display:inline-block;background:#17233b;border:1px solid #334155;border-radius:999px;padding:5px 12px;margin:4px;font-size:13px}
-.foot{color:#64748b;font-size:12px;margin-top:30px;border-top:1px solid #334155;padding-top:14px}
-</style></head><body>
+.btn{display:inline-block;background:#3b82f6;color:#fff;padding:12px 30px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:14px}
+.foot{color:#64748b;font-size:12px;margin-top:30px;border-top:1px solid #334155;padding-top:14px}</style>
+</head><body>
 <div class="bl">A-SHARE · HK · US · QUANT RESEARCH</div>
 <h1>A-Share Quant Research Workbench<br>From “researching one stock” to “a trade plan”, in one closed loop.</h1>
-<p style="color:#94a3b8">Live multi-market data (never faked when offline) → factor lab & auto factor mining → professional backtesting with Walk-Forward → AI diagnosis → strategy vault → market regime & professional trade plan (position sizing / stops / compliance pre-check) → everything rendered in in-app visual popups.</p>
+<p style="color:#94a3b8">Live multi-market data (never faked when offline) → factor lab & auto factor mining → professional backtesting with Walk-Forward → AI diagnosis → strategy vault → market regime & professional trade plan (position sizing / stops / compliance pre-check) → all rendered in in-app visual popups.</p>
 <div style="margin:14px 0">
-<span class="pill">Real-time + last-close tagging</span><span class="pill">Alpha101/158 factors</span>
-<span class="pill">Auto factor mining</span><span class="pill">Walk-Forward backtest</span>
-<span class="pill">NLP strategy generation</span><span class="pill">Portfolio cockpit</span>
+<span class="pill">Real-time + last-close tagging</span><span class="pill">Alpha101/158 factors</span><span class="pill">Auto factor mining</span>
+<span class="pill">Walk-Forward backtest</span><span class="pill">NLP strategy generation</span><span class="pill">Portfolio cockpit</span>
 <span class="pill">Trade plan generator</span><span class="pill">In-app report popups</span>
+</div>
+<h2 style="color:#fff">Screenshots</h2>
+<div class="shots">
+<div class="shot"><img src="images/dashboard.png" alt="Dashboard"><div>Live dashboard with multi-market quotes and market sentiment</div></div>
+<div class="shot"><img src="images/kline.png" alt="K-line"><div>Interactive K-line with MAs, volume and technical indicators</div></div>
+<div class="shot"><img src="images/research.png" alt="Research lab"><div>Factor lab, backtesting and trade-plan generator</div></div>
 </div>
 <div class="grid">
 <div class="card"><b>Factor Lab</b><p>Alpha101/Alpha158, IC/RankIC review, genetic auto factor mining.</p></div>
 <div class="card"><b>Professional Backtest</b><p>Multi-strategy, parameter search, walk-forward OOS, costs/slippage/stops.</p></div>
-<div class="card"><b>AI Fusion</b><p>One-sentence strategy generation, LLM stock diagnosis & sentiment (free/low-cost channels with graceful fallback).</p></div>
+<div class="card"><b>AI Fusion</b><p>One-sentence strategy generation, LLM stock diagnosis & sentiment with graceful fallback.</p></div>
 <div class="card"><b>Portfolio Cockpit</b><p>Multi-benchmark attribution, RBSA style exposure, MCTR/CVaR risk decomposition.</p></div>
 <div class="card"><b>Trade Plan</b><p>Regime → technical snapshot → position sizing → compliance pre-check → scenario plan.</p></div>
-<div class="card"><b>Honest Data</b><p>Real-time when the market is open; tagged last-close when closed; simulated data never shown by default.</p></div>
+<div class="card"><b>Honest Data</b><p>Real-time when open; tagged last-close when closed; simulated data never shown by default.</p></div>
 </div>
 <p>Windows desktop app · local data · 7-day full trial. Research & education tool only — not investment advice.</p>
-<div class="foot">© A-Share Quant Research Workbench · All rights reserved. Disclaimer: historical backtests do not guarantee future results.</div>
+<a class="btn" href="https://github.com/Lilong123-93790997/astock-quant-site">View repository</a>
+<div class="foot">© A-Share Quant Research Workbench · Disclaimer: historical backtests do not guarantee future results.</div>
 </body></html>

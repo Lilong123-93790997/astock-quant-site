@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+# -*- coding: utf-8 -*-
+import io
+zh = """<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>A股量化研究工作站｜从研究到交易计划，一个软件闭环</title>
 <meta name="description" content="A股+港股+美股多市场量化研究台：实时数据(绝不模拟冒充)、因子体检、自动挖因子、专业回测(Walk-Forward)、AI诊股、职业交易计划书、程序内可视化弹窗。">
@@ -89,4 +91,51 @@ ul{margin:8px 0 8px 20px;color:#d7e2f0}
 ⚠️ 本软件为量化研究/教学工具：所有行情均标注来源与实时/收盘状态；回测与信号基于历史数据，不构成投资建议；股市有风险，入市需谨慎。<br>
 © A股量化研究工作站 · GitHub 页面更新于 2026-09
 </div>
-</div></body></html>
+</div></body></html>"""
+
+en = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-width">
+<title>A-Share Quant Research Workbench</title>
+<meta name="description" content="Multi-market quant research workbench: live data (never faked), factor lab, professional backtesting with walk-forward, AI diagnosis and trade-plan generator.">
+<meta property="og:image" content="images/dashboard.png">
+<style>body{background:#0b1526;color:#e2e8f0;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;max-width:1000px;margin:0 auto;padding:46px 22px;line-height:1.7}
+h1{color:#fff;font-size:34px}.bl{color:#7dd3fc}.card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:18px 20px;margin:10px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:18px 0}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
+.shot{background:#1e293b;border:1px solid #334155;border-radius:12px;overflow:hidden}
+.shot img{width:100%;display:block}.shot div{padding:10px 14px;color:#94a3b8;font-size:13px}
+.pill{display:inline-block;background:#17233b;border:1px solid #334155;border-radius:999px;padding:5px 12px;margin:4px;font-size:13px}
+.btn{display:inline-block;background:#3b82f6;color:#fff;padding:12px 30px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:14px}
+.foot{color:#64748b;font-size:12px;margin-top:30px;border-top:1px solid #334155;padding-top:14px}</style>
+</head><body>
+<div class="bl">A-SHARE · HK · US · QUANT RESEARCH</div>
+<h1>A-Share Quant Research Workbench<br>From “researching one stock” to “a trade plan”, in one closed loop.</h1>
+<p style="color:#94a3b8">Live multi-market data (never faked when offline) → factor lab & auto factor mining → professional backtesting with Walk-Forward → AI diagnosis → strategy vault → market regime & professional trade plan (position sizing / stops / compliance pre-check) → all rendered in in-app visual popups.</p>
+<div style="margin:14px 0">
+<span class="pill">Real-time + last-close tagging</span><span class="pill">Alpha101/158 factors</span><span class="pill">Auto factor mining</span>
+<span class="pill">Walk-Forward backtest</span><span class="pill">NLP strategy generation</span><span class="pill">Portfolio cockpit</span>
+<span class="pill">Trade plan generator</span><span class="pill">In-app report popups</span>
+</div>
+<h2 style="color:#fff">Screenshots</h2>
+<div class="shots">
+<div class="shot"><img src="images/dashboard.png" alt="Dashboard"><div>Live dashboard with multi-market quotes and market sentiment</div></div>
+<div class="shot"><img src="images/kline.png" alt="K-line"><div>Interactive K-line with MAs, volume and technical indicators</div></div>
+<div class="shot"><img src="images/research.png" alt="Research lab"><div>Factor lab, backtesting and trade-plan generator</div></div>
+</div>
+<div class="grid">
+<div class="card"><b>Factor Lab</b><p>Alpha101/Alpha158, IC/RankIC review, genetic auto factor mining.</p></div>
+<div class="card"><b>Professional Backtest</b><p>Multi-strategy, parameter search, walk-forward OOS, costs/slippage/stops.</p></div>
+<div class="card"><b>AI Fusion</b><p>One-sentence strategy generation, LLM stock diagnosis & sentiment with graceful fallback.</p></div>
+<div class="card"><b>Portfolio Cockpit</b><p>Multi-benchmark attribution, RBSA style exposure, MCTR/CVaR risk decomposition.</p></div>
+<div class="card"><b>Trade Plan</b><p>Regime → technical snapshot → position sizing → compliance pre-check → scenario plan.</p></div>
+<div class="card"><b>Honest Data</b><p>Real-time when open; tagged last-close when closed; simulated data never shown by default.</p></div>
+</div>
+<p>Windows desktop app · local data · 7-day full trial. Research & education tool only — not investment advice.</p>
+<a class="btn" href="https://github.com/Lilong123-93790997/astock-quant-site">View repository</a>
+<div class="foot">© A-Share Quant Research Workbench · Disclaimer: historical backtests do not guarantee future results.</div>
+</body></html>"""
+with open("index.html", "w", encoding="utf-8") as f:
+    f.write(zh)
+with open("index_en.html", "w", encoding="utf-8") as f:
+    f.write(en)
+print("rewrote index.html / index_en.html")
