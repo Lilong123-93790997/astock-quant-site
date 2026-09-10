@@ -1,0 +1,24 @@
+name: update-quotes
+on:
+  schedule:
+    - cron: "*/5 1-7 * * 1-5"   # 北京时间 9:00-15:59，工作日，每5分钟
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Fetch quotes
+        run: python scripts/fetch_quotes.py
+      - name: Commit
+        run: |
+          git config user.name "quotes-bot"
+          git config user.email "quotes-bot@users.noreply.github.com"
+          git add data/quotes.json
+          git diff --cached --quiet || git commit -m "chore: update quotes $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
